@@ -4,16 +4,21 @@ import pymupdf
 
 
 def extraer_texto_pdf(ruta_pdf):
-    pdf = pymupdf.open(ruta_pdf)
+    try:
+        pdf = pymupdf.open(ruta_pdf)
 
-    texto_completo = ""
+        texto_completo = ""
 
-    for pagina in pdf:
-        texto_completo += pagina.get_text()
+        for pagina in pdf:
+            texto_completo += pagina.get_text()
 
-    pdf.close()
+        pdf.close()
 
-    return texto_completo
+        return texto_completo
+
+    except Exception as error:
+        print(f"✗ Error al leer {ruta_pdf.name}: {error}")
+        return None
 
 
 def obtener_archivos_pdf(carpeta):
