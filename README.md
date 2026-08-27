@@ -2,7 +2,15 @@
 
 Proyecto desarrollado en Python para procesar múltiples archivos PDF, extraer datos estructurados de facturas y generar automáticamente un archivo Excel con la información obtenida.
 
-## Funcionalidades
+## Demo
+
+### PDF de entrada
+
+![PDF de entrada](assets/demo_input.png)
+
+### Excel generado automáticamente
+
+![Excel generado](assets/demo_output.png)
 
 ## Funcionalidades
 
