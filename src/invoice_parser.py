@@ -7,20 +7,6 @@ def convertir_monto(monto):
 
     return int(monto.replace(".", ""))
 
-def obtener_campos_faltantes(datos):
-    campos_obligatorios = {
-        "N° Factura": datos["numero"],
-        "Empresa": datos["empresa"],
-        "RUT": datos["rut"],
-        "Fecha": datos["fecha"],
-        "Total": datos["total"],
-    }
-
-    return [
-        nombre
-        for nombre, valor in campos_obligatorios.items()
-        if valor is None
-    ]
 
 def extraer_datos_factura(texto):
     numero = re.search(r"N°:\s*(\d+)", texto)
@@ -40,6 +26,22 @@ def extraer_datos_factura(texto):
         "iva": convertir_monto(iva.group(1)) if iva else None,
         "total": convertir_monto(total.group(1)) if total else None,
     }
+
+
+def obtener_campos_faltantes(datos):
+    campos_obligatorios = {
+        "N° Factura": datos["numero"],
+        "Empresa": datos["empresa"],
+        "RUT": datos["rut"],
+        "Fecha": datos["fecha"],
+        "Total": datos["total"],
+    }
+
+    return [
+        nombre
+        for nombre, valor in campos_obligatorios.items()
+        if valor is None
+    ]
 
 
 def factura_valida(datos):
