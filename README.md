@@ -4,7 +4,10 @@ Proyecto desarrollado en Python para procesar múltiples archivos PDF, extraer d
 
 ## Funcionalidades
 
+## Funcionalidades
+
 - Lectura automática de múltiples archivos PDF.
+
 - Extracción de los siguientes campos:
   - Número de factura.
   - Empresa.
@@ -13,14 +16,22 @@ Proyecto desarrollado en Python para procesar múltiples archivos PDF, extraer d
   - Subtotal.
   - IVA.
   - Total.
+
 - Conversión de montos desde texto a valores numéricos.
 - Validación de campos obligatorios.
 - Detección de documentos con formato no reconocido.
+- Detección y reporte de campos faltantes.
 - Manejo de PDFs corruptos o ilegibles.
 - Manejo de carpeta de entrada vacía.
 - Exportación automática de resultados a Excel.
+- Formato monetario para Subtotal, IVA y Total.
+- Filtros automáticos en la hoja de resultados.
+- Encabezados en negrita.
+- Primera fila congelada para facilitar la navegación.
+- Ajuste automático del ancho de las columnas.
 - Manejo de errores al guardar el archivo Excel.
 - Generación de facturas ficticias para pruebas.
+- Tests automáticos con `pytest`.
 
 ## Tecnologías utilizadas
 
@@ -296,9 +307,9 @@ Estas funcionalidades pueden incorporarse en futuras versiones.
 
 ## Estado del proyecto
 
-**Versión 1.0**
+**Versión 2.0**
 
-Funcional y lista como primera versión del proyecto.
+Versión funcional y preparada como proyecto de portafolio.
 
 ## Autor
 
